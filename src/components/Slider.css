@@ -1,0 +1,18 @@
+.slider {
+    height: 55vw;
+}
+
+.slider .carousel-item img {
+    object-fit: cover;
+}
+
+.slider .carousel-control-next-icon,
+.slider .carousel-control-prev-icon {
+    background-color: #666;
+    border-radius: 15%;
+}
+
+.slider .carousel-control-next:hover,
+.slider .carousel-control-prev:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
