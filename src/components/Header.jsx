@@ -12,6 +12,7 @@ const Header = () => {
   //   setSearchTerm(event.target.value);
   // };
   const { user, logout } = useAuth();
+  console.log(user);
 
   return (
     <>
@@ -57,6 +58,18 @@ const Header = () => {
               </>
             )}
             {user && (
+              <>
+
+                <li className="nav-item">
+                <Link
+                  className="nav-link link-dark px-2 active"
+                  to="/basket"
+                  
+                >
+                  Basket
+                </Link>
+                </li>
+              
               <li className="nav-item">
                 <button
                   className="nav-link link-dark px-2 active"
@@ -67,6 +80,7 @@ const Header = () => {
                   Logout
                 </button>
               </li>
+              </>
             )}
           </ul>
         </div>

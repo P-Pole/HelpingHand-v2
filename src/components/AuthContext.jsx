@@ -8,6 +8,7 @@ export const useAuth = () => {
 
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
+  
 
   const login = async (email, password) => {
     // Your API call for login goes here.
@@ -27,7 +28,9 @@ export const AuthProvider = ({ children }) => {
 
     const data = await response.json();
     if (data.success) {
-      setUser({ email });
+      const { user } = data;
+      setUser(user);
+      // setUser(data);
       return true;
     } else {
       setUser(null);

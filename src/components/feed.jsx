@@ -6,6 +6,7 @@ import AboutUs from "./aboutUs";
 import Login from "./Login";
 import Register from "./register";
 import CharityDetails from "./CharityDetails";
+import Basket from "./basket";
 
 const Feed = () => {
   return (
@@ -17,6 +18,7 @@ const Feed = () => {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/charities/:charityId" element={<CharityDetails />} />
+        <Route path="/basket" element={<Basket />} />
       </Routes>
     </div>
   );
