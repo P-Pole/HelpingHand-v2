@@ -4,13 +4,13 @@ import { useAuth } from "./AuthContext";
 
 import Logo from "/images/logo.png";
 
-export const SearchContext = createContext();
+// export const SearchContext = createContext();
 
 const Header = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const handleSearchChange = (event) => {
-    setSearchTerm(event.target.value);
-  };
+  // const [searchTerm, setSearchTerm] = useState('');
+  // const handleSearchChange = (event) => {
+  //   setSearchTerm(event.target.value);
+  // };
   const { user, logout } = useAuth();
 
   return (
@@ -71,7 +71,7 @@ const Header = () => {
           </ul>
         </div>
       </nav>
-      <header className="py-3 border-bottom">
+      {/* <header className="py-3 border-bottom">
         <div className="container d-flex flex-wrap justify-content-center">
           <form className="col-12 col-lg-auto mb-3 mb-lg-0" role="search">
             <input
@@ -83,7 +83,7 @@ const Header = () => {
             />
           </form>
         </div>
-      </header>
+      </header> */}
     </>
   );
 };

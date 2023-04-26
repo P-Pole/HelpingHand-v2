@@ -16,7 +16,7 @@ const Feed = () => {
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
-        <Route path="/charities/:charityId" component={CharityDetails} />
+        <Route path="/charities/:charityId" element={<CharityDetails />} />
       </Routes>
     </div>
   );

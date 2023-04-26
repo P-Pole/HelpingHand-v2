@@ -4,6 +4,7 @@ import Logo from "/images/logo.png";
 
 const CharityDetails = () => {
   const { charityId } = useParams();
+  console.log(charityId);
   const [charity, setCharity] = useState(null);
 
   useEffect(() => {
@@ -14,6 +15,7 @@ const CharityDetails = () => {
     try {
       const response = await fetch(`http://127.0.0.1:8000/charities/${charityId}/`);
       const data = await response.json();
+      console.log(data);
       setCharity(data);
     } catch (error) {
       console.error("Error fetching charity details:", error);
@@ -26,10 +28,9 @@ const CharityDetails = () => {
         <div className="row">
           <div className="col-md-6">
             <img
-              src={Logo}
-              className="my-4"
-              alt="Logo"
-              width="90"
+              src={charity.image_url}
+              className="card-img-top"
+              alt={charity.name}
             />
           </div>
         </div>
