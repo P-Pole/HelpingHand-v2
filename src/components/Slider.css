@@ -16,3 +16,65 @@
 .slider .carousel-control-prev:hover {
     background-color: rgba(0, 0, 0, 0.1);
 }
+
+.carousel-caption {
+    max-width: 70%;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+.carousel.carousel h4{
+    color:rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.425);
+}
+  
+.carousel-caption-left {
+  
+  right: auto;
+  transform: translateX(50%);
+}
+
+.carousel-caption-center {
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  transform: translateY(-50%);
+}
+
+.carousel-caption-right {
+  left: auto;
+  
+  transform: translateX(-50%);
+}
+
+.carousel .carousel-caption {
+  top: 50%;
+  bottom: auto;
+  transform: translateY(-50%);
+}
+
+
+@media (max-width: 767px) {
+    .carousel-caption {
+      display: flex !important;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 10px;
+      border-radius: 5px;
+      bottom: 20px;
+    }
+  
+    .carousel-caption-left {
+      left: 5%;
+    }
+  
+    .carousel-caption-center {
+      left: 35%;
+    }
+  
+    .carousel-caption-right {
+      left: 45%;
+    }
+  }
+  
